@@ -1,0 +1,52 @@
+<header class="header">
+    <div class="container">
+        <div class="header__wrapper">
+            <a href="index.html" class="header__logo logo">{{ logo }}</a>
+
+            <nav class="header__menu">
+                <ul class="header__list">
+                    <li class="header__list-item" *ngFor="let item of menu">
+                        <div *ngIf="item.type === 'dropdown'">
+                            <span class="header__link header__link--dropdown">
+                                <span class="header__dropdown-title">{{ item.title }}</span>
+                                <div class="header__dropdown">
+                                    <ul class="header__dropdown-list">
+                                        <li class="header__dropdown-item" *ngFor="let element of item.dropdown">
+                                            <a href="#" class="header__dropdown-link">{{ element.title }}</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </span>
+                        </div>
+
+                        <a *ngIf="item.type === 'link'" href="#" class="header__link">{{ item.title }}</a>
+                    </li>
+
+                    <!-- <li class="header__list-item header__list-item--add">
+                        <a href="#" class="header__link header__button--sign">Sign In</a>
+                    </li>
+                    <li class="header__list-item header__list-item--add">
+                        <a href="#" class="header__link">Start Free</a>
+                    </li> -->
+                </ul>
+            </nav>
+
+            <div class="header__buttons">
+                <button
+                    [class]="
+                        btn.type === 'transparent'
+                            ? 'header__button header__button--sign'
+                            : 'header__button header__button--blue button'
+                    "
+                    *ngFor="let btn of buttons"
+                >
+                    {{ btn.text }}
+                </button>
+
+                <div class="header__hamburger-menu">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
