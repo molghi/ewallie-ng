@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import "https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap";
 * {
@@ -133,8 +137,8 @@ h6 {
 .button {
     display: inline-block;
     font-family: inherit;
-    color: inherit;
-    font-size: inherit;
+    /* color: inherit; */
+    /* font-size: inherit; */
     transition: 0.3s ease 0s;
     padding: 20px 0;
 }

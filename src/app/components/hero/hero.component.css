@@ -1,0 +1,101 @@
+.hero {
+    background: linear-gradient(292.12deg, #62bada -35.02%, #c9e7f2 78.96%);
+}
+
+.hero:after {
+    content: "";
+    position: absolute;
+    top: 190px;
+    right: 0;
+    background: url("../../../assets/images/content/hero-decoration-1.png") 0 0 no-repeat;
+    width: 63px;
+    height: 114px;
+}
+
+@media (max-width: 479.98px) {
+    .hero:after {
+        top: 100px;
+        opacity: 0.3;
+    }
+}
+
+.hero:before {
+    content: "";
+    position: absolute;
+    bottom: 56px;
+    left: 0;
+    background: url("../../../assets/images/content/hero-decoration-2.png") 0 0 no-repeat;
+    width: 74px;
+    height: 104px;
+}
+
+.hero__wrapper:after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    bottom: -172px;
+    right: 0;
+    background: url("../../../assets/images/content/hero-decoration-3.png") 0 0 no-repeat;
+    width: 154px;
+    height: 319px;
+}
+@media (max-width: 479.98px) {
+    .hero__wrapper:after {
+        display: none;
+    }
+}
+.hero__play-button:before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 21px;
+    left: 23px;
+    background: url("../../../assets/images/icons/play.svg") 0 0 / cover no-repeat;
+    background-size: contain;
+    width: 18px;
+    height: 18px;
+}
+.hero__play-button:after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    background-color: #22d497;
+    width: 60px;
+    height: 60px;
+    transition: all 0.3s;
+}
+.hero__play-button:hover {
+    text-decoration: underline;
+}
+.hero__play-button:hover:after {
+    background-color: #4ffbbe;
+}
+
+.hero__check:after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 4px;
+    background: url("../../../assets/images/icons/white-check.svg") 0 0 no-repeat;
+    background-size: contain;
+    width: 10px;
+    height: 8px;
+}
+.hero__check:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #3734a9;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+}
+
+.hero__title,
+.hero__text {
+    font-family: "Manrope";
+}

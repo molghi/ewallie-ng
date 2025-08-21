@@ -1,0 +1,55 @@
+<section
+    class="pt-[140px] max-h-[990px] overflow-hidden relative pt-[140px] max-h-[100vh] overflow-hidden relative max-md:pt-[90px] max-md:max-h-none hero"
+>
+    <div class="container">
+        <div class="flex max-md:flex-col hero__wrapper">
+            <div class="max-w-[646px] self-center lg:flex-[1_1_60%] hero__body">
+                <!-- big title -->
+                <h1
+                    class="font-extrabold text-[60px] leading-[80px] mb-[22px] max-[1214px]:text-[50px] max-[1214px]:leading-[70px] max-lg:text-[40px] max-lg:leading-[50px] max-[479.98px]:text-[30px] hero__title"
+                >
+                    {{ bigTitle }}
+                </h1>
+
+                <!-- text -->
+                <div
+                    class="font-medium text-[20px] leading-[30px] tracking-[-0.02em] text-[#64607d] mb-[56px] max-lg:mb-[30px] max-[479.98px]:text-[18px] hero__text"
+                >
+                    {{ text }}
+                </div>
+
+                <!-- btns -->
+                <div class="flex items-center mb-[53px] lg:flex-wrap max-[479.98px]:justify-center hero__buttons">
+                    <ng-container *ngFor="let btn of buttons">
+                        <a
+                            *ngIf="btn.type === 'regular'"
+                            [href]="btn.link"
+                            class="inline-block rounded-[50px] bg-[#4f46ba] text-white px-[40px] py-[24px] mr-[50px] transition-all duration-300 hover:bg-[#7063ff] max-[479.98px]:w-full max-[479.98px]:text-center max-[479.98px]:mr-0 max-[479.98px]:mb-[20px] hero__button"
+                            >{{ btn.text }}</a
+                        >
+                        <a
+                            *ngIf="btn.type === 'play'"
+                            [href]="btn.link"
+                            class="h-[64px] leading-[64px] font-medium text-[17px] tracking-[-0.02em] text-[#4f46ba] relative pl-[75px] hero__play-button"
+                            >{{ btn.text }}</a
+                        >
+                    </ng-container>
+                </div>
+
+                <!-- check marks -->
+                <div class="flex mb-[50px] max-[479.98px]:justify-center gap-[20px] hero__checks">
+                    <ng-container *ngFor="let check of checks">
+                        <div class="font-medium text-[17px] tracking-[-0.02em] text-[#757095] relative pl-[26px] hero__check">
+                            {{ check }}
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+
+            <!-- img col -->
+            <div class="mt-auto self-end relative z-10 lg:flex-[1_1_40%] max-lg:self-center hero__pic">
+                <img class="lg:max-w-full" [src]="image" alt="" />
+            </div>
+        </div>
+    </div>
+</section>
