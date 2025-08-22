@@ -1,0 +1,56 @@
+<section class="py-[100px]">
+    <div class="container">
+        <div>
+            <div class="font-extrabold text-[71px] mb-[72px] max-[479px]:text-[46px]">{{ title }}</div>
+
+            <div class="blog__items">
+                <!-- featured -->
+                <div
+                    class="bg-white flex justify-between mb-[30px] max-[650px]:flex-col border border-solid border-[#999] rounded-[10px] overflow-hidden"
+                >
+                    <div class="flex flex-col justify-between p-[34px_28px_53px] max-lg:pb-[34px]">
+                        <span class="inline-block font-bold text-[16px] uppercase mb-[10px]">{{ blogFeatured.category }}</span>
+                        <a
+                            href="#"
+                            class="max-w-[524px] mb-auto font-bold text-[29px] leading-[36px] max-lg:text-[23px] hover:underline"
+                            >{{ blogFeatured.title }}</a
+                        >
+                        <a
+                            [href]="blogFeatured.link"
+                            class="blog__item-button inline-block mt-[15px] self-start font-semibold text-[16px] pr-[22px] relative hover:underline"
+                            >{{ blogFeatured?.buttonText }}</a
+                        >
+                    </div>
+                    <div class="w-[499px] h-full max-lg:h-[237px] max-[650px]:w-full">
+                        <img [src]="blogFeatured.image" />
+                    </div>
+                </div>
+
+                <!-- blogs -->
+                <div
+                    class="flex justify-between gap-[30px] max-md:flex-wrap max-md:justify-center max-md:gap-[20px] max-[650px]:flex-col"
+                >
+                    <div
+                        class="flex flex-col bg-white flex-[0_1_382px] max-md:flex-[1_1_45%] max-md:max-w-[358px] max-md:mb-[20px] max-[650px]:max-w-full border border-solid border-[#999] rounded-[10px] overflow-hidden"
+                        *ngFor="let blog of blogs"
+                    >
+                        <div
+                            class="flex flex-col justify-between p-[34px_28px_53px] max-lg:pb-[34px] flex-1 p-[25px_40px_58px_32px] max-lg:px-[30px] max-sm:pb-[25px]"
+                        >
+                            <span class="inline-block font-bold text-[16px] uppercase mb-[10px]">{{ blog.category }}</span>
+                            <a
+                                [href]="blog.link"
+                                class="max-w-[524px] mb-auto font-bold text-[29px] leading-[36px] max-lg:text-[23px] hover:underline"
+                                >{{ blog.title }}</a
+                            >
+                        </div>
+                        <!-- w-[499px] -->
+                        <div class="h-full max-lg:h-[237px] max-[650px]:w-full w-full h-[202px]">
+                            <img [src]="blog.image" class="w-full h-full object-cover max-w-full" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

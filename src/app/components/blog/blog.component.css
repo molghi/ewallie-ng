@@ -1,0 +1,10 @@
+.blog__item-button:after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 0;
+    background: url("../../../assets/images/icons/black-arrow.svg") 0 0 no-repeat;
+    background-size: contain;
+    width: 12px;
+    height: 9px;
+}

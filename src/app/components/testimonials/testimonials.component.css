@@ -1,0 +1,42 @@
+.testimonials__title:after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    right: 55px;
+    background: url("../../../assets/images/content/testi-decoration.png") 0 0 no-repeat;
+    width: 189px;
+    height: 118px;
+}
+
+.testimonials__slide:after {
+    content: "";
+    position: absolute;
+    top: -31px;
+    left: 35px;
+    background: #000;
+    width: 57px;
+    height: 57px;
+    border-radius: 50%;
+}
+
+.testimonials__slide:before {
+    content: "";
+    position: absolute;
+    top: -13px;
+    left: 55px;
+    z-index: 1;
+    background: url("../../../assets/images/icons/commas.svg") 0 0 / contain no-repeat;
+    width: 18px;
+    height: 17px;
+}
+
+.testimonials__slider:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: -300px;
+    right: 101%;
+    background: #fafbff;
+    width: 1000px;
+    height: 800px;
+}

@@ -1,0 +1,53 @@
+.why__pic:after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    right: 55px;
+    background: url("../../../assets/images/content/why-decoration-1.png") 0 0 no-repeat;
+    width: 96px;
+    height: 77px;
+}
+
+.why__point:after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 7px;
+    background: url("../../../assets/images/icons/white-check.svg") 0 0 no-repeat;
+    background-size: contain;
+    width: 10px;
+    height: 8px;
+}
+
+.why__point:before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 0;
+    background: #fdbc64;
+    background-size: contain;
+    width: 24px;
+    border-radius: 50%;
+    height: 24px;
+}
+
+.quote__body:after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 45px;
+    background: url("../../../assets/images/icons/commas.svg") 0 0 no-repeat;
+    width: 14px;
+    height: 13px;
+}
+
+.quote__body:before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 30px;
+    background: #000;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+}

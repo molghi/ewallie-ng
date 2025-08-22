@@ -1,0 +1,29 @@
+<section class="statistics relative bg-[#3734a9] text-white py-[80px] px-[65px]">
+    <div class="container">
+        <div
+            class="flex justify-between gap-[50px] max-[1214px]:gap-[25px] max-lg:flex-wrap max-lg:justify-center max-lg:gap-[50px]"
+        >
+            <div
+                class="font-normal text-[19px] leading-[31px] max-w-[143px] max-lg:flex-[1_1_100%] max-lg:mb-[30px] max-lg:max-w-full max-lg:text-center"
+            >
+                {{ text }}
+            </div>
+
+            <div
+                class="relative z-[1] max-lg:mb-[50px] last:max-lg:mb-0 max-sm:flex-shrink-0 max-sm:text-center"
+                *ngFor="let item of items"
+            >
+                <div class="font-extrabold text-[72px] leading-[72px] mb-[21px]">{{ item.bigText }}</div>
+                <div
+                    [class]="
+                        item.type === 'person icon'
+                            ? 'statistics__item-caption font-normal text-[30px] pl-[36px] relative max-[1214px]:text-[25px] max-sm:inline-block'
+                            : 'statistics__item-caption statistics__item-caption--mod font-normal text-[30px] pl-[36px] relative max-[1214px]:text-[25px] max-sm:inline-block'
+                    "
+                >
+                    {{ item.smallText }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

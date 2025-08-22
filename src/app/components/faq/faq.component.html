@@ -1,0 +1,46 @@
+<section class="faq relative mb-[150px] max-[479px]:mb-[75px]">
+    <div class="container">
+        <div>
+            <div class="font-extrabold text-[71px] leading-[76px] mb-[71px] max-w-[590px] relative z-10">{{ title }}</div>
+
+            <div class="flex justify-between gap-[48px] max-[992px]:flex-col">
+                <div class="flex-[1_1_751px] max-[992px]:flex-none max-[992px]:mb-[30px]">
+                    <div
+                        [class]="
+                            activeQna === i
+                                ? 'faq__item bg-white border border-solid border-[#cfcfcf] rounded-[10px] p-[26px_23px] cursor-pointer relative mt-[15px] first:mt-0 active'
+                                : 'faq__item bg-white border border-solid border-[#cfcfcf] rounded-[10px] p-[26px_23px] cursor-pointer relative mt-[15px] first:mt-0'
+                        "
+                        *ngFor="let item of qna; let i = index"
+                        (click)="changeActiveQna(i)"
+                    >
+                        <div class="font-extrabold text-[22px] leading-[1.25] pr-[60px] max-md:text-[18px]">{{ item.q }}</div>
+                        <div
+                            class="hidden mt-[23px] font-medium text-[16px] leading-[31px] max-md:text-[14px]"
+                            [style]="activeQna === i ? 'display: block' : ''"
+                        >
+                            {{ item.a }}
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="flex-[1_1_401px] bg-white border border-solid border-[#cfcfcf] rounded-[10px] text-center flex flex-col p-[67px_32px_32px] max-lg:flex-none max-lg:p-[32px] max-[767px]:p-[32px_20px]"
+                >
+                    <div class="mb-[43px] max-md:mb-[25px]">
+                        <img [src]="askBlock.icon" alt="" class="inline-block" />
+                    </div>
+                    <div class="font-extrabold text-[22px] mb-[23px] max-[1214px]:leading-[1.25]">{{ askBlock.title }}</div>
+                    <div class="font-semibold text-[16px] leading-[31px] mb-[30px] flex-1 max-md:mb-[25px]">
+                        {{ askBlock.text }}
+                    </div>
+                    <div
+                        class="w-full font-semibold rounded-[5px] py-[32px] text-white bg-[#ff7f5c] hover:bg-[#c76348] transition-all duration-300"
+                    >
+                        {{ askBlock.buttonText }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,44 @@
+<section class="pt-[72px] mb-[140px] max-md:mb-[110px]">
+    <div class="container">
+        <div>
+            <div class="flex justify-between mb-[71px] max-lg:gap-[30px] max-md:flex-col max-md:items-center">
+                <!-- title & text -->
+                <div class="max-w-[485px] max-lg:basis-1/2 max-lg:flex-grow max-md:text-center max-md:mb-[40px]">
+                    <div
+                        class="font-extrabold text-[56px] leading-[66px] mb-[19px] max-lg:text-[41px] max-md:leading-[50px] max-sm:text-[34px]"
+                    >
+                        {{ title }}
+                    </div>
+                    <div class="font-medium text-[16px] leading-[29px]">{{ text }}</div>
+                </div>
+
+                <!-- quote -->
+                <div class="max-w-[402px]">
+                    <div
+                        class="quote__body bg-[rgba(196,196,196,0.3)] rounded-[20px] p-[38px_34px_33px] font-semibold text-[15px] leading-[22px] relative"
+                    >
+                        <p>{{ quote.text }}</p>
+                        <p class="mt-[18px]">- {{ quote.author }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- items -->
+            <div class="flex justify-between gap-[31px] max-md:flex-wrap max-md:justify-center">
+                <div
+                    class="flex-[1_1_33%] bg-white border border-solid border-[#dbe4e9] rounded-[20px] p-[21px_22px_45px] max-md:mb-[30px] max-md:max-w-[380px] max-[650px]:basis-full"
+                    *ngFor="let item of items; let i = index"
+                >
+                    <div class="font-extrabold text-[22px] mb-[45px]">{{ (i + 1).toString().padStart(2, "0") }}</div>
+                    <div class="text-center mb-[34px]">
+                        <img [src]="item.image" alt="" class="inline-block" />
+                    </div>
+                    <div class="text-center mb-[17px] font-extrabold text-[30px] leading-[34px] max-[992px]:text-[22px]">
+                        {{ item.title }}
+                    </div>
+                    <div class="text-center font-medium text-[14px] leading-[26px]">{{ item.text }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

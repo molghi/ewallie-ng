@@ -1,0 +1,20 @@
+.quote__body:after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 45px;
+    background: url("../../../assets/images/icons/commas.svg") 0 0 no-repeat;
+    width: 14px;
+    height: 13px;
+}
+
+.quote__body:before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 30px;
+    background: #000;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+}

@@ -1,0 +1,38 @@
+<section class="py-[150px] md:py-[65px]">
+    <div class="container">
+        <div class="testimonials__wrapper">
+            <div
+                class="testimonials__title font-extrabold text-[71px] mb-[37px] relative max-md:text-[71px] max-[479px]:text-[47px]"
+            >
+                {{ title }}
+            </div>
+
+            <div class="font-medium text-[16px] leading-[29px] max-w-[570px] mb-[74px] max-md:max-w-full max-[479px]:text-[14px]">
+                {{ text }}
+            </div>
+
+            <div class="testimonials__bottom">
+                <div class="testimonials__slider relative">
+                    <div class="testimonials__slides">
+                        <div
+                            class="testimonials__slide max-w-[699px] p-[30px_25px_26px_39px] border border-solid border-[#cfcfcf] rounded-[10px] bg-white flex justify-between items-center gap-[26px] relative max-md:mx-auto max-[479px]:p-[35px_25px]"
+                            *ngFor="let slide of slides"
+                        >
+                            <div class="flex-1 md:flex-[1_1_60%]">
+                                <div
+                                    class="font-semibold text-[25px] leading-[36px] mb-[41px] max-[1214px]:text-[18px] max-[992px]:leading-[25px] max-[992px]:mb-[20px] max-[479px]:text-[16px]"
+                                >
+                                    {{ slide.text }}
+                                </div>
+                                <div class="mt-auto font-semibold text-[20px] max-[1214px]:text-[14px]">- {{ slide.name }}</div>
+                            </div>
+                            <div class="md:flex-[1_1_40%] max-[479px]:hidden">
+                                <img class="max-w-full" [src]="slide.image" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

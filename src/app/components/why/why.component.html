@@ -1,0 +1,55 @@
+<section class="mb-[80px]">
+    <div class="container">
+        <div
+            [class]="
+                type === 'regular'
+                    ? 'flex justify-between gap-[73px] max-lg:flex-col'
+                    : 'flex flex-row-reverse justify-between gap-[73px] max-lg:flex-col'
+            "
+        >
+            <div class="why__pic relative max-xl:flex-[1_1_50%] max-lg:mb-[50px] max-lg:self-center">
+                <img class="max-xl:max-w-full" [src]="content.image" alt="" />
+            </div>
+
+            <div [class]="type === 'regular' ? 'max-xl:flex-[1_1_50%]' : 'max-xl:flex-[1_1_50%] self-end pb-[40px]'">
+                <div class="font-bold text-[14px] uppercase text-[#3734a9] mb-[15px]">{{ content.title }}</div>
+
+                <div
+                    class="font-extrabold text-[50px] leading-[60px] mb-[29px] max-xl:text-[44px] max-sm:text-[35px] max-sm:leading-[50px]"
+                >
+                    {{ content.bigTitle }}
+                </div>
+
+                <div
+                    [class]="
+                        type === 'regular'
+                            ? 'font-medium text-[18px] leading-[30px] max-xl:text-[16px] border-b border-solid border-gray-400 pb-[20px]'
+                            : 'font-medium text-[18px] leading-[30px] mb-[60px] max-w-[420px] max-lg:max-w-none'
+                    "
+                >
+                    {{ content.text }}
+                </div>
+
+                <div *ngIf="type === 'regular'" class="pt-[30px] border-t border-[#c4c4c4] flex flex-col gap-[20px]">
+                    <div
+                        class="why__point relative font-medium text-[19px] pl-[35px] max-xl:text-[16px]"
+                        *ngFor="let item of content.checks"
+                    >
+                        {{ item }}
+                    </div>
+                </div>
+
+                <div *ngIf="type === 'reversed'" class="quote max-w-[480px]">
+                    <div
+                        class="quote__body bg-[rgba(196,196,196,0.3)] rounded-[20px] p-[38px_34px_33px] font-semibold text-[15px] leading-[22px] relative"
+                    >
+                        <p>
+                            {{ content?.quote?.text }}
+                        </p>
+                        <p class="mt-[18px]">- {{ content?.quote?.author }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

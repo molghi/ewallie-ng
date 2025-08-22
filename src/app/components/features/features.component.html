@@ -1,0 +1,45 @@
+<section class="features relative bg-[#c9e7f2] py-[146px] max-[480px]:py-20">
+    <div class="container">
+        <div class="features__wrapper">
+            <div
+                class="font-extrabold text-[71px] mb-[37px] max-lg:text-[63px] max-md:text-[55px] max-md:text-center max-[480px]:text-[45px] max-[480px]:leading-[1.25]"
+            >
+                {{ title }}
+            </div>
+
+            <div class="max-w-[557px] font-medium text-[16px] leading-[29px] mb-[51px] max-md:text-center max-md:max-w-none">
+                {{ text }}
+            </div>
+
+            <div
+                class="flex justify-between gap-x-[30px] max-lg:flex-wrap max-md:gap-x-[20px] max-[480px]:flex-col max-[480px]:gap-y-[20px]"
+            >
+                <ng-container *ngFor="let item of items">
+                    <div
+                        class="flex-[1_1_33%] bg-white border border-solid border-[#abc8d2] rounded-[10px] p-[53px_65px_43px_31px] relative z-[1] max-md:px-[30px]"
+                        *ngIf="item.type === 'big'"
+                    >
+                        <div class="mb-[33px]">
+                            <img [src]="item.image" alt="" />
+                        </div>
+                        <div class="font-extrabold text-[22px] leading-[35px]">{{ item.title }}</div>
+                        <div class="mt-[16px] font-medium text-[15px] leading-[26px]">{{ item.text }}</div>
+                    </div>
+                </ng-container>
+
+                <div
+                    class="flex flex-col gap-y-[30px] flex-[1_1_33%] max-lg:mt-[30px] max-lg:flex-row max-lg:gap-x-[30px] max-md:gap-x-[20px] max-md:mt-[20px] max-[480px]:flex-col max-[480px]:gap-y-[20px] max-[480px]:mt-0"
+                >
+                    <ng-container *ngFor="let item of items">
+                        <div
+                            class="flex-grow bg-white border border-solid border-[#abc8d2] rounded-[10px] p-[42px_42px_42px_31px] relative z-[1] max-lg:basis-1/2 max-md:px-[30px]"
+                            *ngIf="item.type === 'little'"
+                        >
+                            <div class="font-extrabold text-[22px] leading-[35px]">{{ item.title }}</div>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

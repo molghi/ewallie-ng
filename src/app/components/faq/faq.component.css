@@ -1,0 +1,44 @@
+.faq__item:after {
+    content: "";
+    position: absolute;
+    top: 36px;
+    right: 27px;
+    background: #3d3d3d;
+    width: 20px;
+    height: 2px;
+}
+.faq__item:before {
+    content: "";
+    position: absolute;
+    top: 26px;
+    right: 36px;
+    background: #3d3d3d;
+    width: 2px;
+    height: 20px;
+    transition: all 0.3s;
+}
+
+.faq__item.active:before {
+    transform: rotate(90deg);
+    top: 27px;
+}
+
+.faq:after {
+    content: "";
+    position: absolute;
+    top: 75px;
+    left: 0;
+    background: url("../../../assets/images/content/faq-decoration.png") 0 0 no-repeat;
+    width: 30px;
+    height: 65px;
+}
+
+.faq:before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 0;
+    background: url("../../../assets/images/content/faq-decoration-2.png") 0 0 no-repeat;
+    width: 99px;
+    height: 152px;
+}

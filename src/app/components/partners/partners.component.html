@@ -1,0 +1,15 @@
+<section class="bg-[#f5f6f8] pt-[64px] pb-[76px] lg:max-[992px]:pb-[46px]">
+    <div class="container">
+        <div>
+            <div class="font-medium text-[22px] mb-[36px] text-center max-md:leading-[1.5] max-sm:text-[20px]">
+                {{ title }}
+            </div>
+
+            <div class="flex justify-between items-center gap-[50px] max-lg:flex-wrap max-lg:justify-center">
+                <div class="max-lg:mb-[30px]" *ngFor="let img of images">
+                    <img class="max-w-full" [src]="img" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

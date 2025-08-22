@@ -1,0 +1,47 @@
+<footer class="footer">
+    <div class="container">
+        <div class="footer__wrapper">
+            <div class="footer__top">
+                <div class="footer__column" *ngFor="let col of columns">
+                    <ng-container *ngIf="col.type === 'general'">
+                        <div class="footer__column-title">{{ col.title }}</div>
+
+                        <div class="footer__text">{{ col.text }}</div>
+
+                        <div class="footer__social">
+                            <a [href]="item.link" class="footer__social-link" *ngFor="let item of col.socials">
+                                <img [src]="item.icon" alt="" />
+                            </a>
+                        </div>
+                    </ng-container>
+
+                    <ng-container *ngIf="col.type === 'links'">
+                        <div class="footer__column-title footer__column-title--list">{{ col.title }}</div>
+                        <ul class="footer__list">
+                            <li class="footer__item" *ngFor="let link of col.links">
+                                <a href="#" class="footer__link">{{ link }}</a>
+                            </li>
+                        </ul>
+                    </ng-container>
+
+                    <ng-container *ngIf="col.type === 'subscribe'">
+                        <div class="footer__column-title footer__column-title--list">{{ col.title }}</div>
+                        <div class="footer__column-box">
+                            <form class="footer__newsletter">
+                                <input class="footer__newsletter-input" type="email" [placeholder]="col.placeholder" />
+                                <button class="footer__newsletter-button">{{ col.buttonText }}</button>
+                            </form>
+                            <div class="footer__sub-text">
+                                {{ col.text }}
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <div class="footer__copyright">{{ copy }}</div>
+            </div>
+        </div>
+    </div>
+</footer>
