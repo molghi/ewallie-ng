@@ -7,15 +7,17 @@
                     : 'flex flex-row-reverse justify-between gap-[73px] max-lg:flex-col'
             "
         >
-            <div class="why__pic relative max-xl:flex-[1_1_50%] max-lg:mb-[50px] max-lg:self-center">
+            <div
+                class="why__pic relative max-xl:flex-[1_1_50%] max-lg:mb-[50px] max-lg:self-center hover:scale-105 transition-all duration-500"
+            >
                 <img class="max-xl:max-w-full" [src]="content.image" alt="" />
             </div>
 
-            <div [class]="type === 'regular' ? 'max-xl:flex-[1_1_50%]' : 'max-xl:flex-[1_1_50%] self-end pb-[40px]'">
+            <div [class]="type === 'regular' ? 'flex-[1_1_50%]' : 'flex-[1_1_50%] self-end pb-[40px]'">
                 <div class="font-bold text-[14px] uppercase text-[#3734a9] mb-[15px]">{{ content.title }}</div>
 
                 <div
-                    class="font-extrabold text-[50px] leading-[60px] mb-[29px] max-xl:text-[44px] max-sm:text-[35px] max-sm:leading-[50px]"
+                    class="font-extrabold text-[50px] leading-[60px] mb-[29px] max-xl:text-[41px] max-sm:text-[35px] max-sm:leading-[50px]"
                 >
                     {{ content.bigTitle }}
                 </div>

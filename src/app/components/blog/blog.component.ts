@@ -17,8 +17,8 @@ export class BlogComponent {
     title: string = 'Recent Blogs';
 
     blogFeatured: Blog = {
-        category: 'BEST PRACTICES',
-        title: 'In design active temper be uneasy. Thirty for remove plenty regard.',
+        category: 'Design Best Practices',
+        title: 'Key principles to improve workflow efficiency',
         image: 'assets/images/content/blog-1.jpg',
         link: '#',
         buttonText: 'Read More',
@@ -26,20 +26,20 @@ export class BlogComponent {
 
     blogs: Array<Blog> = [
         {
-            category: 'BEST PRACTICES',
-            title: 'Partiality on or continuing particular principles as.',
+            category: 'UI Trends 2025',
+            title: 'Emerging patterns in user interface design',
             image: 'assets/images/content/blog-2.jpg',
             link: '#',
         },
         {
-            category: 'BEST PRACTICES',
-            title: 'Village did removed enjoyed explain',
+            category: 'Productivity Tips',
+            title: 'Boost your output with simple methods',
             image: 'assets/images/content/blog-3.jpg',
             link: '#',
         },
         {
-            category: 'BEST PRACTICES',
-            title: 'Wise busy past both park when an ye no. Nay likely her length.',
+            category: 'Productivity Tips',
+            title: 'Strategies for effective home-office routines',
             image: 'assets/images/content/blog-4.jpg',
             link: '#',
         },

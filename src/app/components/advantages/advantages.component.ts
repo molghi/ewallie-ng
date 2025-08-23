@@ -8,10 +8,10 @@ import { Component } from '@angular/core';
 export class AdvantagesComponent {
     title: string = 'Automated portfolio tracking';
 
-    text: string = 'Yet bed any for travelling assistance indulgence unpleasing. Not thoughts all exercise blessing.';
+    text: string = 'Monitor your assets effortlessly and in real time.';
 
     quote: { text: string; author: string } = {
-        text: 'Wise busy past both park when an ye no. Nay likely her length sooner thrown sex lively income. The expense windows adapted sir. Wrong widen.',
+        text: 'Tracking my entire portfolio has never been easier. Everything updates automatically, and I always know where I stand.',
         author: 'Mike Taylor, Web Designer',
     };
 
@@ -19,17 +19,17 @@ export class AdvantagesComponent {
         {
             image: 'assets/images/icons/adv-icon-1.svg',
             title: 'Connect wallets & companies',
-            text: 'Indulgence way everything joy alteration boisterous the attachment. Party we years to order allow asked of.',
+            text: 'Link all your accounts and wallets quickly for seamless tracking',
         },
         {
             image: 'assets/images/icons/adv-icon-2.svg',
             title: 'Review transactions',
-            text: 'Indulgence way everything joy alteration boisterous the attachment. Party we years to order allow asked of.',
+            text: 'View every transaction in one place and stay on top of your finances',
         },
         {
             image: 'assets/images/icons/adv-icon-3.svg',
             title: 'Get income insights',
-            text: 'Indulgence way everything joy alteration boisterous the attachment. Party we years to order allow asked of.',
+            text: 'View every transaction in one place and stay on top of your finances',
         },
     ];
 }

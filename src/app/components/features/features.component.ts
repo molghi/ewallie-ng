@@ -13,25 +13,24 @@ interface Item {
     styleUrls: ['./features.component.css'],
 })
 export class FeaturesComponent {
-    title: string = 'Features that blow mind';
+    title: string = 'Features that blow your mind';
 
-    text: string =
-        'We so opinion friends me message as delight. Whole front do of plate heard oh ought. His defective nor convinced residence own.';
+    text: string = 'Discover the tools and capabilities designed to make your workflow seamless.';
 
     items: Array<Item> = [
         {
             type: 'big',
-            title: 'Really boy law county she unable her sister',
+            title: 'Connect everything instantly',
             image: 'assets/images/icons/adv-icon-2.svg',
-            text: 'We so opinion friends me message as delight. Whole front do of plate heard oh ought.',
+            text: 'Link accounts and services without any hassle',
         },
         {
             type: 'big',
-            title: 'Among sex are leave law built now',
+            title: 'Real-time analytics',
             image: 'assets/images/icons/adv-icon-1.svg',
-            text: 'We so opinion friends me message as delight. Whole front do of plate heard oh ought.',
+            text: 'See updates and trends the moment they happen.',
         },
-        { type: 'little', title: 'Merits behind on afraid or warmly' },
-        { type: 'little', title: 'Believing neglected so so allowance existence' },
+        { type: 'little', title: 'Smart notifications' },
+        { type: 'little', title: 'Customizable settings' },
     ];
 }

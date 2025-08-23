@@ -2,7 +2,7 @@
     <div class="container">
         <div class="flex justify-between items-center">
             <a
-                href="index.html"
+                href="#"
                 class="max-md:relative max-md:z-10 text-[30px] font-bold transition-all duration-300 hover:opacity-50 logo"
                 >{{ logo }}</a
             >
@@ -51,6 +51,7 @@
                             : 'not-italic font-medium text-[14px] self-center hover:underline rounded-[50px] w-[137px] text-center bg-[#4f46ba] text-white ml-[50px] transition-all duration-300 hover:no-underline hover:bg-[#7063ff] max-lg:ml-[30px] max-md:py-[10px] max-sm:w-full max-sm:ml-[20px] max-[360px]:hidden button'
                     "
                     *ngFor="let btn of buttons"
+                    (click)="toggleForm()"
                 >
                     {{ btn.text }}
                 </button>

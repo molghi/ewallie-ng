@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
     styleUrls: ['./cta.component.css'],
 })
 export class CtaComponent {
-    title: string = 'Discover a better way to manage spendings';
+    title: string = 'Simplify and optimize the way you manage money';
 
-    buttonText: string = 'Get Started Now';
+    buttonText: string = 'Start Now';
 }

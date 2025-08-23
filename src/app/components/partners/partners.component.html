@@ -6,7 +6,7 @@
             </div>
 
             <div class="flex justify-between items-center gap-[50px] max-lg:flex-wrap max-lg:justify-center">
-                <div class="max-lg:mb-[30px]" *ngFor="let img of images">
+                <div class="max-lg:mb-[30px] hover:scale-105 transition-all duration-300" *ngFor="let img of images">
                     <img class="max-w-full" [src]="img" alt="" />
                 </div>
             </div>

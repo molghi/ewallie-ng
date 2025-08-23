@@ -6,13 +6,13 @@ import { Component } from '@angular/core';
     styleUrls: ['./footer.component.css'],
 })
 export class FooterComponent {
-    copy: string = 'Copyright @ eWallie! 2022. All Rights Reserved.';
+    copy: string = 'Copyright: © eWallie! 2022. All Rights Reserved.';
 
     columns: Array<any> = [
         {
             type: 'general',
             title: 'eWallie',
-            text: 'Finance helps companies manage payments easily.',
+            text: 'Simplifying finance management for businesses',
             socials: [
                 { link: 'https://linkedin.com', icon: 'assets/images/icons/in.svg' },
                 { link: 'https://facebook.com', icon: 'assets/images/icons/messenger.svg' },
@@ -20,17 +20,17 @@ export class FooterComponent {
                 { link: 'https://google.com', icon: 'assets/images/icons/twoo.svg' },
             ],
         },
-        { type: 'links', title: 'Company', links: ['About Us', 'Careers', 'Blog', 'Pricing'] },
+        { type: 'links', title: 'Company', links: ['About eWallie', 'Join Our Team', 'Insights & Articles', 'Plans & Pricing'] },
         {
             type: 'links',
             title: 'Resources',
-            links: ['Proposal Template', 'Invoice Template', 'Tutorial', 'How to write a contract'],
+            links: ['Proposal Templates', 'Invoice Templates', 'How-to Guides', 'Contract Writing Tips'],
         },
         {
             type: 'subscribe',
             title: 'Join Our Newsletter',
-            text: `* We'll send you weekly updates for your better finance management.`,
-            placeholder: 'Your email address',
+            text: `* Receive weekly tips to manage your finances better.`,
+            placeholder: 'Enter your email',
             buttonText: 'Subscribe',
         },
     ];

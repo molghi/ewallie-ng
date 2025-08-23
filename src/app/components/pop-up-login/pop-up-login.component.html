@@ -1,1 +1,31 @@
-<p>pop-up-login works!</p>
+<div
+    [class]="
+        !isActive
+            ? 'pop-up-login flex justify-center items-center fixed inset-0 z-10 opacity-0 invisible pointer-events-none transition-all duration-300'
+            : 'active pop-up-login flex justify-center items-center fixed inset-0 z-10 opacity-0 invisible pointer-events-none transition-all duration-300'
+    "
+>
+    <div class="absolute inset-0 bg-black/50" (click)="closeForm()"></div>
+    <form
+        class="w-[500px] h-[400px] flex justify-center items-center bg-white shadow-[0_0_10px_silver] p-[30px] rounded-[10px] relative z-20 max-md:w-full max-md:mx-[20px] max-sm:p-[20px]"
+    >
+        <div class="w-[400px] max-w-full max-md:w-full">
+            <div class="absolute top-[20px] right-[20px] cursor-pointer" (click)="closeForm()">╳</div>
+            <div class="text-[36px] font-bold capitalize mb-[30px] text-center max-sm:text-[30px]">{{ title }}</div>
+            <div class="mb-[30px]" *ngFor="let item of fields">
+                <input
+                    *ngIf="item.kind === 'input'"
+                    [type]="item.type"
+                    class="rounded-[25px] border border-solid w-full border-black px-[20px] py-[10px] focus:border-red-500 max-sm:text-[14px]"
+                    [placeholder]="item.placeholder"
+                />
+            </div>
+            <button
+                type="submit"
+                class="w-full text-[18px] bg-[#3734a9] text-white rounded-[35px] px-[20px] py-[15px] transition-all hover:bg-[#7063ff]"
+            >
+                {{ btnText }}
+            </button>
+        </div>
+    </form>
+</div>

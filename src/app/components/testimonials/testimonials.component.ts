@@ -14,22 +14,21 @@ interface Slide {
 export class TestimonialsComponent {
     title: string = 'Testimonials';
 
-    text: string =
-        'We so opinion friends me message as delight. Whole front do of plate heard oh ought. His defective nor convinced residence own.';
+    text: string = 'See what our clients say about our services and experience';
 
     slides: Array<Slide> = [
         {
-            text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus maiores ut numquam omnis.',
+            text: 'Working with this platform simplified all my tasks effortlessly. Highly recommend it!',
             name: 'Steve Paul, Web Snap',
             image: 'assets/images/content/testi-2.jpg',
         },
         {
-            text: 'Wise busy past both park when an ye no. Nay likely her length sooner.',
+            text: 'The insights I get every day save me so much time and stress.',
             name: 'Mika Taylor, Web Designer',
             image: 'assets/images/content/testi-3.jpg',
         },
         {
-            text: 'Past both park when an ye no. Nay likely her length sooner thrown sex lively income. The expense windows. Blessing welcomed ladyship.',
+            text: 'Reliable, fast, and easy to use. I couldn’t ask for more.',
             name: 'Jane Doe, Systems Engineer',
             image: 'assets/images/content/testi.jpg',
         },

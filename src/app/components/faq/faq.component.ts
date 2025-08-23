@@ -21,31 +21,31 @@ export class FaqComponent {
 
     qna: Array<Item> = [
         {
-            q: 'The expense windows adapted sir. Wrong widen drawn.',
-            a: 'Offending belonging promotion provision an be oh consulted ourselves it. Blessing welcomed ladyship she met humoured sir breeding her.',
+            q: 'How secure is my data?',
+            a: 'We use industry-standard encryption and security protocols to protect your information.',
         },
         {
-            q: 'Six curiosity day assurance bed necessary?',
-            a: 'Offending belonging promotion provision an be oh consulted ourselves it. Blessing welcomed ladyship she met humoured sir breeding her. Offending belonging promotion provision an be oh consulted ourselves it.',
+            q: 'Can I cancel my subscription anytime?',
+            a: 'Yes, you can cancel or change your subscription at any time without penalties.',
         },
         {
-            q: 'Produce say the ten moments parties?',
-            a: 'Offending belonging promotion provision an be oh consulted ourselves it. Blessing welcomed ladyship she met humoured sir breeding her.',
+            q: 'How do I track my payments?',
+            a: 'Our dashboard provides real-time updates and reports on all your transactions.',
         },
         {
-            q: 'Simple innate summer fat appear basket his desire joy?',
-            a: 'Offending belonging promotion provision an be oh consulted ourselves it. Blessing welcomed ladyship she met humoured sir breeding her. promotion provision an be oh consulted ourselves it. Blessing',
+            q: 'Are there any hidden fees?',
+            a: 'No, all fees are clearly listed and there are no unexpected charges.',
         },
         {
-            q: 'Outward clothes promise at gravity do excited?',
-            a: 'Offending belonging promotion provision an be oh consulted ourselves it. Blessing welcomed ladyship she met humoured sir breeding her.',
+            q: 'How can I get support quickly?',
+            a: 'Our support team is available 24/7 via chat, email, or phone.',
         },
     ];
 
     askBlock = {
         icon: 'assets/images/icons/msg-icon.svg',
-        title: 'Do you have more questions?',
-        text: 'End-to-end payments and financial management in a single solution. Meet the right platform to help realize.',
-        buttonText: 'Shoot a Direct Mail',
+        title: 'Have more questions?',
+        text: 'Discover end-to-end payment solutions and get help whenever you need it.',
+        buttonText: 'Contact Support',
     };
 }

@@ -20,19 +20,19 @@ export class AppComponent {
     whyRegular: WhyContent = {
         image: 'assets/images/content/why-1.png',
         title: 'WHY CHOOSE US',
-        bigTitle: 'Track your payments on the go with the best way possible',
-        text: 'Indulgence way everything joy alteration boisterous the attachment. Party we years to order allow asked of.',
-        checks: ['Get Overview at a glance', 'Deposit funds easily, securlity', 'Get Live Support'],
+        bigTitle: 'Track your payments effortlessly anywhere',
+        text: 'Manage your finances quickly, securely, and with complete transparency.',
+        checks: ['Get an overview at a glance', 'Deposit funds easily and safely', 'Access live support anytime'],
     };
 
     whyReversed: WhyContent = {
         image: 'assets/images/content/why-2.png',
         title: 'WHY CHOOSE US',
-        bigTitle: 'Save money with proper transaction',
-        text: 'We so opinion friends me message as delight. Whole front do of plate heard oh ought. His defective nor convinced residence own.',
+        bigTitle: 'Save money with smarter transactions',
+        text: 'Keep your payments efficient, transparent, and cost-effective every time.',
         quote: {
-            text: 'Wise busy past both park when an ye no. Nay likely her length sooner thrown sex lively income. The expense windows.',
-            author: 'Mike Taylor, Web Designer',
+            text: 'Using this system has reduced my transaction costs and simplified my workflow. Everything is clear and fast',
+            author: 'Jim Smith, Web Designer',
         },
     };
 }

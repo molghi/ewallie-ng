@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SharedService } from 'src/app/services/shared.service';
 
 @Component({
     selector: 'app-header',
@@ -6,6 +7,12 @@ import { Component } from '@angular/core';
     styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
+    constructor(private shared: SharedService) {}
+
+    toggleForm() {
+        this.shared.triggerAction(); // Emit event
+    }
+
     logo: string = 'eWallie';
 
     buttons: Array<any> = [
