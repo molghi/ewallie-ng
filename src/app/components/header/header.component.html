@@ -1,4 +1,10 @@
-<header class="absolute z-10 w-full py-[38px] max-md:py-[20px] header">
+<header
+    [class]="
+        headerVisible
+            ? 'fixed bg-[#C9E7F2] visible shadow-lg top-0 left-0 z-[50] w-full py-[15px] max-md:py-[20px] header'
+            : 'absolute z-10 w-full py-[38px] max-md:py-[20px] header'
+    "
+>
     <div class="container">
         <div class="flex justify-between items-center">
             <a
@@ -7,19 +13,31 @@
                 >{{ logo }}</a
             >
 
-            <nav class="not-italic font-medium text-[14px] header__menu">
-                <ul class="flex">
-                    <li class="mr-[40px]" *ngFor="let item of menu">
+            <nav
+                [class]="
+                    isHamburgerShown
+                        ? 'header__menu active not-italic font-medium text-[14px] header__menu'
+                        : 'header__menu not-italic font-medium text-[14px] header__menu'
+                "
+            >
+                <ul class="header__list flex">
+                    <li class="header__list-item mr-[40px] max-lg:mr-[25px] last:mr-0" *ngFor="let item of menu; let i = index">
+                        <!-- case 1 -->
                         <div *ngIf="item.type === 'dropdown'">
                             <span
-                                class="cursor-pointer max-md:text-[20px] max-md:w-full relative header__link header__link--dropdown"
+                                class="header__link header__link--dropdown cursor-pointer max-md:text-[20px] max-md:w-full relative"
+                                (click)="toggleDropdown(i)"
                             >
                                 <span
-                                    class="cursor-pointer max-md:text-[20px] max-md:pr-[30px] max-md:w-full inline-block relative pr-[19px] header__dropdown-title"
+                                    class="header__dropdown-title cursor-pointer max-md:text-[20px] max-md:pr-[30px] max-md:w-full inline-block relative pr-[19px]"
                                     >{{ item.title }}</span
                                 >
                                 <div
-                                    class="absolute top-full -left-[20px] min-w-[200px] transition-all duration-300 translate-y-[15px] opacity-0 invisible max-md:hidden max-md:relative max-md:left-0 max-md:m-[-10px] max-md:transition-none header__dropdown"
+                                    [class]="
+                                        whichDropdownShown === i
+                                            ? 'active header__dropdown absolute top-full -left-[20px] min-w-[200px] transition-all duration-300 translate-y-[15px] opacity-0 invisible max-md:hidden max-md:relative max-md:left-0 max-md:m-[-10px] max-md:transition-none'
+                                            : 'block header__dropdown absolute top-full -left-[20px] min-w-[200px] transition-all duration-300 translate-y-[15px] opacity-0 invisible max-md:hidden max-md:relative max-md:left-0 max-md:m-[-10px] max-md:transition-none'
+                                    "
                                 >
                                     <ul
                                         class="rounded-[15px] shadow-[0_0_5px_gray] overflow-hidden max-md:rounded-none max-md:shadow-none header__dropdown-list"
@@ -36,9 +54,21 @@
                             </span>
                         </div>
 
-                        <a *ngIf="item.type === 'link'" href="#" class="relative pb-[10px] hover:underline header__link">{{
-                            item.title
-                        }}</a>
+                        <!-- case 2 -->
+                        <a
+                            *ngIf="item.type === 'link'"
+                            href="#"
+                            class="header__link relative pb-[10px] hover:underline max-md:text-[20px]"
+                            >{{ item.title }}</a
+                        >
+
+                        <!-- case 3 -->
+                        <a
+                            *ngIf="item.type === 'hidden'"
+                            href="#"
+                            class="header__link header__link--hidden relative pb-[10px] hover:underline max-md:text-[20px]"
+                            >{{ item.title }}</a
+                        >
                     </li>
                 </ul>
             </nav>
@@ -47,8 +77,8 @@
                 <button
                     [class]="
                         btn.type === 'transparent'
-                            ? 'not-italic font-medium text-[14px] bg-transparent self-center hover:underline max-[360px]:hidden'
-                            : 'not-italic font-medium text-[14px] self-center hover:underline rounded-[50px] w-[137px] text-center bg-[#4f46ba] text-white ml-[50px] transition-all duration-300 hover:no-underline hover:bg-[#7063ff] max-lg:ml-[30px] max-md:py-[10px] max-sm:w-full max-sm:ml-[20px] max-[360px]:hidden button'
+                            ? 'not-italic font-medium text-[14px] bg-transparent self-center hover:underline max-[360px]:hidden whitespace-nowrap'
+                            : 'not-italic font-medium text-[14px] self-center hover:underline rounded-[50px] w-[137px] text-center bg-[#4f46ba] text-white ml-[50px] transition-all duration-300 hover:no-underline hover:bg-[#7063ff] max-lg:ml-[30px] max-md:py-[10px] max-md:min-w-[100px] max-sm:w-full max-sm:ml-[20px] max-[360px]:hidden button'
                     "
                     *ngFor="let btn of buttons"
                     (click)="toggleForm()"
@@ -56,10 +86,24 @@
                     {{ btn.text }}
                 </button>
 
-                <div class="header__hamburger-menu">
+                <div
+                    [class]="isHamburgerShown ? 'active header__hamburger-menu' : 'header__hamburger-menu'"
+                    (click)="toggleHamburger()"
+                >
                     <span></span>
                 </div>
             </div>
         </div>
     </div>
 </header>
+
+<button
+    [class]="
+        scrollTopBtnVisible
+            ? 'back-to-top pointer-events-auto visible opacity-100 fixed bottom-[20px] right-[20px] text-[40px] bg-[#C9E7F2] w-[70px] z-[10] text-center p-[15px] rounded-[50%] transition-all duration-300 hover:opacity-60 active:opacity-30 shadow-lg'
+            : 'back-to-top opacity-0 invisible pointer-events-none fixed bottom-[20px] right-[20px] text-[40px] bg-[#C9E7F2] w-[70px] z-[10] text-center p-[15px] rounded-[50%] transition-all duration-300 hover:opacity-60 active:opacity-30 shadow-lg'
+    "
+    (click)="goUp()"
+>
+    ↑
+</button>

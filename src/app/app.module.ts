@@ -17,26 +17,24 @@ import { PopUpLoginComponent } from './components/pop-up-login/pop-up-login.comp
 import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    HeroComponent,
-    PartnersComponent,
-    AdvantagesComponent,
-    WhyComponent,
-    FeaturesComponent,
-    TestimonialsComponent,
-    StatisticsComponent,
-    BlogComponent,
-    FaqComponent,
-    CtaComponent,
-    PopUpLoginComponent,
-    FooterComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HeaderComponent,
+        HeroComponent,
+        PartnersComponent,
+        AdvantagesComponent,
+        WhyComponent,
+        FeaturesComponent,
+        TestimonialsComponent,
+        StatisticsComponent,
+        BlogComponent,
+        FaqComponent,
+        CtaComponent,
+        PopUpLoginComponent,
+        FooterComponent,
+    ],
+    imports: [BrowserModule],
+    providers: [],
+    bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

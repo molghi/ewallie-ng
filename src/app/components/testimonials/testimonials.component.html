@@ -7,15 +7,17 @@
                 {{ title }}
             </div>
 
-            <div class="font-medium text-[16px] leading-[29px] max-w-[570px] mb-[74px] max-md:max-w-full max-[479px]:text-[14px]">
+            <div
+                class="font-medium text-[16px] leading-[29px] max-w-[570px] mb-[74px] max-md:max-w-full max-[479px]:text-[14px] max-sm:relative max-sm:z-[2]"
+            >
                 {{ text }}
             </div>
 
             <div class="testimonials__bottom">
-                <div class="testimonials__slider relative">
-                    <div class="testimonials__slides">
+                <div class="testimonials__slider relative max-w-[699px] mx-auto pt-[30px] swiper mySwiper">
+                    <div class="testimonials__slides swiper-wrapper">
                         <div
-                            class="testimonials__slide max-w-[699px] p-[30px_25px_26px_39px] border border-solid border-[#cfcfcf] rounded-[10px] bg-white flex justify-between items-center gap-[26px] relative max-md:mx-auto max-[479px]:p-[35px_25px]"
+                            class="testimonials__slide swiper-slide p-[30px_25px_26px_39px] border border-solid border-[#cfcfcf] rounded-[10px] bg-white flex justify-between items-center gap-[26px] relative max-md:mx-auto max-[479px]:p-[35px_25px]"
                             *ngFor="let slide of slides"
                         >
                             <div class="flex-1 md:flex-[1_1_60%]">

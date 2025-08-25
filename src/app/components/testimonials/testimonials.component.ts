@@ -32,5 +32,10 @@ export class TestimonialsComponent {
             name: 'Jane Doe, Systems Engineer',
             image: 'assets/images/content/testi.jpg',
         },
+        {
+            text: 'The insights I get every day save me so much time and stress.',
+            name: 'Mika Taylor, Web Designer',
+            image: 'assets/images/content/testi-3.jpg',
+        },
     ];
 }

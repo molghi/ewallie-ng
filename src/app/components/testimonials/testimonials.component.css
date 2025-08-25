@@ -34,9 +34,10 @@
     content: "";
     position: absolute;
     z-index: 1;
-    top: -300px;
+    /* top: -300px; */
+    bottom: 0;
     right: 101%;
     background: #fafbff;
     width: 1000px;
-    height: 800px;
+    height: 450px;
 }

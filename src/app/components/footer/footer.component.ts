@@ -34,4 +34,11 @@ export class FooterComponent {
             buttonText: 'Subscribe',
         },
     ];
+
+    activeCol: number = -1;
+
+    toggleColumn(index: number) {
+        if (this.activeCol === index) this.activeCol = -1;
+        else this.activeCol = index;
+    }
 }

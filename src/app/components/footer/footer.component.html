@@ -1,10 +1,10 @@
 <footer class="bg-[#fafbff] pt-[75px]">
     <div class="container">
         <div>
-            <div class="flex justify-between gap-[30px] mb-[60px] flex-wrap max-lg:flex-nowrap max-md:flex-col max-md:mb-0">
+            <div class="flex justify-between gap-[30px] mb-[60px] flex-wrap max-md:flex-col max-md:mb-0">
                 <div
-                    class="flex-[1_1_auto] last:flex-[0_1_389px] max-lg:mt-0 mt-[30px] mb-[30px] max-md:flex-auto"
-                    *ngFor="let col of columns"
+                    class="flex-[1_1_auto] last:flex-[0_1_389px] max-md:last:flex-1 max-lg:mt-0 mt-[30px] mb-[30px] max-md:flex-auto max-md:mb-0 max-md:last:mb-[30px]"
+                    *ngFor="let col of columns; let i = index"
                 >
                     <!-- case 1 -->
                     <ng-container *ngIf="col.type === 'general'">
@@ -15,7 +15,7 @@
                         </div>
 
                         <div
-                            class="footer__text mt-[30px] font-medium text-[16px] leading-[28px] text-[#757095] mb-[31px] max-md:mb-[10px] max-w-[213px] max-md:max-w-full"
+                            class="footer__text mt-[30px] max-md:mt-[10px] font-medium text-[16px] leading-[28px] text-[#757095] mb-[31px] max-md:mb-[10px] max-w-[213px] max-md:max-w-full"
                         >
                             {{ col.text }}
                         </div>
@@ -39,11 +39,12 @@
                     <!-- case 2 -->
                     <ng-container *ngIf="col.type === 'links'">
                         <div
-                            class="footer__column-title footer__column-title--list pointer-events-none font-manrope font-bold text-[21px] text-[#181433] max-md:pointer-events-auto"
+                            class="footer__column-title footer__column-title--list relative pointer-events-none font-manrope font-bold text-[21px] text-[#181433] max-md:pointer-events-auto"
+                            (click)="toggleColumn(i)"
                         >
                             {{ col.title }}
                         </div>
-                        <ul class="mt-[30px] max-md:hidden">
+                        <ul [class]="activeCol === i ? 'mt-[30px] max-md:block' : 'mt-[30px] max-md:hidden'">
                             <li class="mt-[25px]" *ngFor="let link of col.links">
                                 <a href="#" class="footer__link hover:underline">{{ link }}</a>
                             </li>
@@ -53,19 +54,20 @@
                     <!-- case 3 -->
                     <ng-container *ngIf="col.type === 'subscribe'">
                         <div
-                            class="footer__column-title footer__column-title--list pointer-events-none font-manrope font-bold text-[21px] text-[#181433] max-md:pointer-events-auto"
+                            class="footer__column-title footer__column-title--list relative pointer-events-none font-manrope font-bold text-[21px] text-[#181433] max-md:pointer-events-auto"
+                            (click)="toggleColumn(i)"
                         >
                             {{ col.title }}
                         </div>
-                        <div>
+                        <div [class]="activeCol === i ? 'max-md:block' : 'max-md:hidden'">
                             <form class="mt-[30px] mb-[21px] flex items-center max-h-[52px] max-sm:flex-col max-sm:mb-[70px]">
                                 <input
-                                    class="footer__newsletter-input inline-block border border-solid border-transparent border-r-0 h-[52px] bg-[#eef] px-[15px] focus:border-[#3734a9] placeholder:text-[#181433]/20 max-sm:border-r max-sm:mb-[10px]"
+                                    class="footer__newsletter-input inline-block border border-solid border-transparent border-r-0 h-[52px] bg-[#eef] px-[15px] focus:border-[#3734a9] placeholder:text-[#181433]/20 max-sm:border-r max-sm:mb-[10px] max-md:w-full max-[650px]:py-[15px]"
                                     type="email"
                                     [placeholder]="col.placeholder"
                                 />
                                 <button
-                                    class="inline-block h-[52px] w-[149px] text-center bg-[#3734a9] text-white transition-all hover:bg-[#7063ff] max-sm:w-full"
+                                    class="inline-block h-[52px] w-[149px] text-center bg-[#3734a9] text-white transition-all hover:bg-[#7063ff] max-sm:w-full max-[650px]:py-[15px]"
                                 >
                                     {{ col.buttonText }}
                                 </button>

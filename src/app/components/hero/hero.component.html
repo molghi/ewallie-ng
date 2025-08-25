@@ -19,7 +19,7 @@
                 </div>
 
                 <!-- btns -->
-                <div class="flex items-center mb-[53px] lg:flex-wrap max-[479.98px]:justify-center hero__buttons">
+                <div class="flex items-center mb-[53px] max-lg:flex-wrap max-[479.98px]:justify-center hero__buttons">
                     <ng-container *ngFor="let btn of buttons">
                         <a
                             *ngIf="btn.type === 'regular'"
@@ -37,7 +37,7 @@
                 </div>
 
                 <!-- check marks -->
-                <div class="flex mb-[50px] max-[479.98px]:justify-center gap-[20px] hero__checks">
+                <div class="flex mb-[50px] max-[479.98px]:justify-center gap-[20px] hero__checks max-sm:flex-wrap">
                     <ng-container *ngFor="let check of checks">
                         <div class="font-medium text-[17px] tracking-[-0.02em] text-[#757095] relative pl-[26px] hero__check">
                             {{ check }}
@@ -47,7 +47,8 @@
             </div>
 
             <!-- img col -->
-            <div class="mt-auto self-end relative z-10 lg:flex-[1_1_40%] max-lg:self-center hero__pic">
+            <!-- relative z-10 -->
+            <div class="mt-auto self-end lg:flex-[1_1_40%] max-lg:self-center hero__pic">
                 <img class="lg:max-w-full" [src]="image" alt="" />
             </div>
         </div>

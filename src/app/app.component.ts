@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
+
+declare var Swiper: any; // allow TypeScript to recognize global Swiper
 
 export interface WhyContent {
     image: string;
@@ -35,4 +37,16 @@ export class AppComponent {
             author: 'Jim Smith, Web Designer',
         },
     };
+
+    ngAfterViewInit() {
+        const swiper = new Swiper('.mySwiper', {
+            slidesPerView: 1,
+            spaceBetween: 50,
+            loop: true,
+            autoplay: {
+                delay: 2500, // 2.5 seconds between slides
+                disableOnInteraction: false, // continue autoplay after user interaction
+            },
+        });
+    }
 }
